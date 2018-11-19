@@ -1,0 +1,22 @@
+/* 
+1. ogólne dane
+2. Navigacja
+3. Slider
+4. o mnie
+5. oferta
+6. aktualne promocje
+7.galeria
+8. Kontakt 
+9. Stopka
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+/* Nawigacja  */
