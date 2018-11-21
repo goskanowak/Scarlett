@@ -334,3 +334,91 @@ nav li a:hover {
 }
 
 /* 7. Galeria */
+
+.gallery {
+  border-bottom: 5px solid #c2000b;
+}
+
+.gallery h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.gallery h3:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 30%;
+  background: #c2000b;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.box div {
+  margin-top: 30px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.box div {
+  height: 400px;
+  width: 400px;
+  border-radius: 10%;
+}
+
+.box .face {
+  background-image: url(https://images.unsplash.com/photo-1531860415933-7d5348a737d4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec323a04ea22c9913bbdb2d7ffa94170&auto=format&fit=crop&w=334&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box .maniciure {
+  background-image: url(https://images.unsplash.com/photo-1457040931721-53ca161dab33?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=898018ed70eb5a889300ac2d082de540&auto=format&fit=crop&w=400&q=60);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box .laser {
+  background-image: url(https://images.unsplash.com/photo-1511284800349-cb63bc2e6c0e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e585f0abc6bf4dfb60b5242c82e58623&auto=format&fit=crop&w=500&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box .office {
+  background-image: url(img/gabinet/DSC_0200.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box p {
+  display: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 400px;
+  font-size: 3rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.face:hover p,
+.maniciure:hover p,
+.laser:hover,
+.office:hover p {
+  display: block;
+}
+
+/* Kontakt */
