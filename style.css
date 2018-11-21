@@ -19,7 +19,7 @@
 body {
   font-family: 'Saira Condensed', sans-serif;
   font-size: 20px;
-  height: 800vh;
+  /* height: 800vh; */
 }
 
 /* 2. Nawigacja  */
@@ -39,7 +39,7 @@ li {
   flex-basis: 100%;
 }
 
-a {
+nav a {
   display: block;
   font-size: 25px;
   text-align: center;
@@ -402,7 +402,7 @@ nav li a:hover {
 }
 
 .box p {
-  display: none;
+  opacity: 0;
   height: 100%;
   width: 100%;
   text-align: center;
@@ -412,13 +412,103 @@ nav li a:hover {
   background-color: rgba(0, 0, 0, .5);
   border-radius: 10%;
   cursor: pointer;
+  transition: .5s;
 }
 
 .face:hover p,
 .maniciure:hover p,
-.laser:hover,
+.laser:hover p,
 .office:hover p {
-  display: block;
+  opacity: 1;
 }
 
-/* Kontakt */
+/* 8. Kontakt */
+
+.contact .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.contact h3:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 30%;
+  background: #c2000b;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.contactBox {
+  font-size: 1.9rem;
+}
+
+.contactBox h4 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hoursOffice {
+  border-left: 3px solid #c2000b;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.contact p {
+  line-height: 120%;
+}
+
+.adress {
+  border-left: 3px solid #c2000b;
+  padding: 0 20px;
+}
+
+.media {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 3rem;
+}
+
+.media i {
+  margin: 0 20px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.media .fa-google-plus-square:hover {
+  transform: scale(1.2);
+  color: #c2000b;
+}
+
+.media .fa-facebook-square:hover {
+  transform: scale(1.2);
+  color: #3B5998;
+}
+
+.map {
+  height: 550px;
+  width: 70vw;
+  background-color: #999;
+}
+
+/* 9. Stopka */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: #ccc;
+  font-size: .9rem
+}
+
+.footer a {
+  text-decoration: none;
+}
