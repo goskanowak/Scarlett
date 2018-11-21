@@ -17,8 +17,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Saira Condensed', sans-serif;
   font-size: 20px;
+  height: 800vh;
 }
 
 /* 2. Nawigacja  */
@@ -137,15 +138,16 @@ nav li a:hover {
 .aboutMe {
   width: 80%;
   margin: 25px auto;
+  border-bottom: 3px solid gray;
 }
 
-.aboutMe h1 {
+.aboutMe h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 3em;
   text-align: center;
 }
 
-.aboutMe h1:after {
+.aboutMe h2:after {
   content: "";
   display: block;
   clear: both;
@@ -193,3 +195,83 @@ nav li a:hover {
 }
 
 /* Oferta */
+
+.offer {
+  border-bottom: 5px solid #c2000b;
+}
+
+.offer h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  text-align: center;
+  margin: 50px auto;
+}
+
+/* .offer h2:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 30%;
+  background: #c2000b;
+  text-align: center;
+  margin: 20px auto;
+} */
+
+.treatment {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.offer .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px 5px 40px;
+}
+
+.name p {
+  font-size: 1.5rem;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* kiedy dodanie zostanie klasa hover dodać after */
+/* .name p:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 120%;
+  background: #c2000b;
+  text-align: center;
+  margin: 20px auto;
+} */
+
+.name .show {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.treatment article {
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  /* display: none; */
+  padding: 0 70px;
+}
+
+.treatment h3 {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 2rem;
+}
+
+.treatment h3 span {
+  color: grey;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Aktualne promocje */
