@@ -4,10 +4,11 @@
 3. Slider
 4. o mnie
 5. oferta
-6. aktualne promocje
-7.galeria
-8. Kontakt 
-9. Stopka
+6. Bony
+7. aktualne promocje
+8.galeria
+9. Kontakt 
+10. Stopka
 -------------------------------------------------------------------------*/
 
 /* 1. Ogólne */
@@ -41,14 +42,14 @@ li {
 
 nav a {
   display: block;
-  font-size: 25px;
+  font-size: 1.2em;
   text-align: center;
   text-decoration: none;
   width: 140px;
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 70px;
   color: black;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Mali', cursive;
 }
 
 nav li a:hover {
@@ -80,35 +81,35 @@ nav li a:hover {
   object-fit: cover;
   width: 100%;
   opacity: 0;
-  animation: slider 80s infinite linear;
+  animation: slider 64s infinite linear;
 }
 
 .slider li:nth-child(2) img {
-  animation-delay: 10s;
+  animation-delay: 8s;
 }
 
 .slider li:nth-child(3) img {
-  animation-delay: 20s
+  animation-delay: 16s
 }
 
 .slider li:nth-child(4) img {
-  animation-delay: 30s
+  animation-delay: 24s
 }
 
 .slider li:nth-child(5) img {
-  animation-delay: 40s
+  animation-delay: 32s
 }
 
 .slider li:nth-child(6) img {
-  animation-delay: 50s
+  animation-delay: 40s
 }
 
 .slider li:nth-child(7) img {
-  animation-delay: 60s
+  animation-delay: 48s
 }
 
 .slider li:nth-child(8) img {
-  animation-delay: 70s
+  animation-delay: 56s
 }
 
 @keyframes slider {
@@ -138,11 +139,11 @@ nav li a:hover {
 .aboutMe {
   width: 80%;
   margin: 25px auto;
-  border-bottom: 3px solid gray;
+  /* border-bottom: 3px solid gray; */
 }
 
 .aboutMe h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Berkshire Swash', cursive;
   font-size: 3em;
   text-align: center;
 }
@@ -174,20 +175,20 @@ nav li a:hover {
   text-align: justify
 }
 
-.aboutBox .school {
+/* .aboutBox .school {
   text-align: center;
   width: 100%;
 }
 
 .aboutBox .school p {
   display: inline-block;
-  /* padding: 10px; */
-  margin: 20px auto;
-  width: 30%;
-  text-align: center;
-  font-size: 2em;
-  cursor: pointer;
-  font-family: 'Dancing Script', cursive;
+margin: 20px auto;
+width: 30%;
+text-align: center;
+font-size: 2em;
+cursor: pointer;
+font-family: 'Dancing Script',
+cursive;
 }
 
 .aboutBox .school p:hover {
@@ -195,20 +196,21 @@ nav li a:hover {
   background-color: #c2000b;
 }
 
+*/
 /* Oferta */
 
-.offer {
+/* .offer {
   border-bottom: 5px solid #c2000b;
-}
+} */
 
 .offer h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Mali', cursive;
   font-size: 3em;
   text-align: center;
   margin: 50px auto;
 }
 
-/* .offer h2:after {
+.offer h2:after {
   content: "";
   display: block;
   clear: both;
@@ -217,7 +219,7 @@ nav li a:hover {
   background: #c2000b;
   text-align: center;
   margin: 20px auto;
-} */
+}
 
 .treatment {
   padding: 0 20px;
@@ -258,9 +260,15 @@ nav li a:hover {
 
 .treatment article {
   letter-spacing: 2px;
-  font-size: 1.3rem;
-  /* display: none; */
+  line-height: 150%;
+  font-size: 1.5rem;
+  display: none;
   padding: 0 70px;
+}
+
+/* Dodawana klasa po kliknięciu + */
+.treatment article.active {
+  display: block;
 }
 
 .treatment h3 {
@@ -275,10 +283,53 @@ nav li a:hover {
   font-weight: bold;
 }
 
+/* Bony */
+
+.voucherBox {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FAFAFC;
+  margin: 0 auto 70px auto;
+  border-bottom: 5px solid #c2000b;
+}
+
+.voucherOffer {
+  width: 50%;
+}
+
+.voucherOffer h4 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.voucherOffer h4:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 80%;
+  background: #c2000b;
+  margin: 20px auto;
+}
+
+.voucherOffer p {
+  width: 80%;
+  margin: 20px auto;
+  font-size: 1.5rem;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.voucherImg {}
+
 /* Aktualne promocje */
 
 .sale .promo {
-  background-image: url(https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f384fa6a6caa83e0ffdcef585e20c99&auto=format&fit=crop&w=1350&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f384fa6a6caa83e0ffdcef585e20c99&auto=format&fit=crop&w=1350&q=80); */
+  /* background-image: url(https://cdn.pixabay.com/photo/2017/12/28/14/19/background-3045316_960_720.jpg); */
+  background-image: url(https://cdn.pixabay.com/photo/2017/12/28/14/19/background-3045317_960_720.jpg);
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -293,7 +344,8 @@ nav li a:hover {
 .promo h3 {
   padding: 50px 0;
   font-size: 3rem;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(225, 255, 255, .5);
+  color: #000;
 }
 
 .promotions {
@@ -308,7 +360,8 @@ nav li a:hover {
 .promotion h4 {
   font-size: 3rem;
   padding: 10px 0;
-  background-color: rgba(0, 0, 0, .5);
+  color: #000;
+  background-color: rgba(225, 255, 255, .5);
   margin-bottom: 15px;
 }
 
@@ -323,14 +376,16 @@ nav li a:hover {
 }
 
 .promotion p {
-  background-color: rgba(0, 0, 0, .7);
+  /* background-color: rgba(225, 255, 255, .5); */
+  color: #000;
 }
 
 .timePromo {
   margin-top: 30px;
   padding: 25px 0;
   font-size: 3rem;
-  background-color: rgba(0, 0, 0, .7);
+  /* background-color: rgba(225, 255, 255, .5); */
+  color: #000;
 }
 
 /* 7. Galeria */
@@ -380,6 +435,12 @@ nav li a:hover {
   background-repeat: no-repeat;
 }
 
+.box .body {
+  background-image: url(https://images.unsplash.com/photo-1533094835326-76dd44a9d91c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bb7bc6f0c4111897bed39680269104a5&auto=format&fit=crop&w=750&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .box .maniciure {
   background-image: url(https://images.unsplash.com/photo-1457040931721-53ca161dab33?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=898018ed70eb5a889300ac2d082de540&auto=format&fit=crop&w=400&q=60);
   background-position: center;
@@ -416,6 +477,7 @@ nav li a:hover {
 }
 
 .face:hover p,
+.body:hover p,
 .maniciure:hover p,
 .laser:hover p,
 .office:hover p {
