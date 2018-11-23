@@ -143,7 +143,7 @@ nav li a:hover {
 }
 
 .aboutMe h2 {
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Mali', cursive;
   font-size: 3em;
   text-align: center;
 }
@@ -221,7 +221,7 @@ cursive;
   margin: 20px auto;
 }
 
-.treatment {
+.treatments {
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -242,7 +242,7 @@ cursive;
 }
 
 /* kiedy dodanie zostanie klasa hover dodać after */
-/* .name p:after {
+/* .addLine p:after {
   content: "";
   display: block;
   clear: both;
@@ -258,7 +258,7 @@ cursive;
   cursor: pointer;
 }
 
-.treatment article {
+.treatments article {
   letter-spacing: 2px;
   line-height: 150%;
   font-size: 1.5rem;
@@ -267,20 +267,50 @@ cursive;
 }
 
 /* Dodawana klasa po kliknięciu + */
-.treatment article.active {
+.treatments article.active {
   display: block;
 }
 
-.treatment h3 {
+.offer h3 {
   text-align: center;
   margin: 50px auto;
   font-size: 2rem;
 }
 
-.treatment h3 span {
+.offer h3 span {
   color: rgb(44, 104, 54);
   font-size: 2.2rem;
   font-weight: bold;
+}
+
+.offer>p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.treatment div {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 0 0 150px;
+  /* border-bottom: 1px solid grey; */
+}
+
+.treatment div:nth-child(odd) {
+  /* border-bottom: 1px solid grey; */
+  background-color: #ddd;
+}
+
+.IPLActive div {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 0 0 150px;
+}
+
+.IPLActive div:nth-child(odd) {
+  /* border-bottom: 1px solid grey; */
+  background-color: #ddd;
 }
 
 /* Bony */
@@ -298,7 +328,7 @@ cursive;
 }
 
 .voucherOffer h4 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Mali', cursive;
   font-size: 3em;
   text-align: center;
   margin: 50px auto;
@@ -322,14 +352,12 @@ cursive;
   text-align: justify;
 }
 
-.voucherImg {}
-
 /* Aktualne promocje */
 
 .sale .promo {
   /* background-image: url(https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f384fa6a6caa83e0ffdcef585e20c99&auto=format&fit=crop&w=1350&q=80); */
-  /* background-image: url(https://cdn.pixabay.com/photo/2017/12/28/14/19/background-3045316_960_720.jpg); */
-  background-image: url(https://cdn.pixabay.com/photo/2017/12/28/14/19/background-3045317_960_720.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2017/12/28/14/19/background-3045316_960_720.jpg);
+  /* background-image: url(https://cdn.pixabay.com/photo/2017/12/28/14/19/background-3045317_960_720.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -395,7 +423,7 @@ cursive;
 }
 
 .gallery h3 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Mali', cursive;
   font-size: 3em;
   text-align: center;
   margin: 50px auto;
@@ -492,7 +520,7 @@ cursive;
 }
 
 .contact h3 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Mali', cursive;
   font-size: 3em;
   text-align: center;
   margin: 50px auto;
@@ -543,6 +571,7 @@ cursive;
   margin: 0 20px;
   transition: .5s;
   cursor: pointer;
+  color: #c2000b;
 }
 
 .media .fa-google-plus-square:hover {
@@ -555,7 +584,7 @@ cursive;
   color: #3B5998;
 }
 
-.map {
+.map iframe {
   height: 550px;
   width: 70vw;
   background-color: #999;
