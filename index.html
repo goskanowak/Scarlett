@@ -14,210 +14,211 @@
   <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Mali:400,700&amp;subset=latin-ext" rel="stylesheet">
 
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Nawigacja -->
-  <header class="wrapper">
-    <nav>
-      <a href="#"><img src="img/logo/LogoSmall.jpg" alt="Logo Gabinet kosmetyczny Scarlett"></a>
-      <ul>
-        <li>
-          <a href="#aboutMe">O mnie</a>
+  <header>
+    <nav class="menu">
+      <a href="#" class="menu__link"><img src="img/logo/LogoSmall.jpg" alt="Logo Gabinet kosmetyczny Scarlett"></a>
+      <ul class="menu__lists">
+        <li class="menu__list">
+          <a href="#aboutMe" class="menu__link">O mnie</a>
         </li>
-        <li>
-          <a href="#offer">Oferta</a>
+        <li class="menu__list">
+          <a href="#offer" class="menu__link">Oferta</a>
         </li>
-        <li>
-          <a href="#promo">Promocje</a>
+        <li class="menu__list">
+          <a href="#promo" class="menu__link">Promocje</a>
         </li>
-        <li>
-          <a href="#gallery">Galeria</a>
+        <li class="menu__list">
+          <a href="#gallery" class="menu__link">Galeria</a>
         </li>
-        <li>
-          <a href="#contact">Kontakt</a>
+        <li class="menu__list">
+          <a href="#contact" class="menu__link">Kontakt</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <!-- Slider -->
-  <section class="wrapper slider">
+  <section class="slider">
     <div id="carousel">
-      <li><img src="img/gabinet/DSC_0200.JPG" alt=""></li>
-      <li><img src="img/gabinet/DSC_0203.JPG" alt=""></li>
-      <li><img src="img/gabinet/DSC_0204.JPG" alt=""></li>
-      <li><img src="img/gabinet/DSC_0205.JPG" alt=""></li>
-      <li><img src="img/gabinet/DSC_0206.JPG" alt=""></li>
-      <li><img src="img/gabinet/DSC_0210.JPG" alt=""></li>
-      <li><img src="img/gabinet/DSC_0219.JPG" alt=""></li>
-      <li><img src="img/gabinet/DSC_0202.JPG" alt=""></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0200.JPG" alt="" class="slider__img"></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0203.JPG" alt="" class="slider__img"></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0204.JPG" alt="" class="slider__img"></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0205.JPG" alt="" class="slider__img"></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0206.JPG" alt="" class="slider__img"></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0210.JPG" alt="" class="slider__img"></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0219.JPG" alt="" class="slider__img"></li>
+      <li class="slider__list"><img src="img/gabinet/DSC_0202.JPG" alt="" class="slider__img"></li>
     </div>
   </section>
 
   <!-- AboutMe -->
-  <section class="wrapper aboutMe">
-    <a name="aboutMe"></a>
-    <h2>O mnie</h2>
-    <div class="aboutBox">
-      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3fa46375259c39d07d0227e8ade6daa&auto=format&fit=crop&w=334&q=80"
-        alt="">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates commodi eveniet illo fugit autem
-        excepturi ullam eius vero iste provident numquam, doloremque inventore similique. Sit, cupiditate, optio
-        corrupti tempora quibusdam soluta repellendus deleniti a architecto aut nemo sunt distinctio nostrum sint
-        fugiat animi omnis doloremque id molestiae? Necessitatibus fugiat fuga illo rem modi laboriosam cumque ea quod
-        dolore mollitia velit facere voluptatum molestiae consectetur illum, eius tempore magnam sapiente nisi soluta
-        harum in ad? Deserunt atque odio minus voluptatibus quod! dolore mollitia velit facere voluptatum molestiae
-        consectetur illum, eius tempore magnam sapiente nisi soluta
-        <div class="school">
-          <p>Szkolenia </p>
-          <p>Certyfikaty </p>
-        </div>
-      </p>
+  <section class="wrapper">
+    <div class="about">
+      <a name="aboutMe"></a>
+      <h2 class="title">O mnie</h2>
+      <div class="about-box">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3fa46375259c39d07d0227e8ade6daa&auto=format&fit=crop&w=334&q=80"
+          alt="" class="about-box__img">
+        <p class="page__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates commodi eveniet
+          illo fugit autem
+          excepturi ullam eius vero iste provident numquam, doloremque inventore similique. Sit, cupiditate, optio
+          corrupti tempora quibusdam soluta repellendus deleniti a architecto aut nemo sunt distinctio nostrum sint
+          fugiat animi omnis doloremque id molestiae? Necessitatibus fugiat fuga illo rem modi laboriosam cumque ea
+          quod
+          dolore mollitia velit facere voluptatum molestiae consectetur illum, eius tempore magnam sapiente nisi soluta
+          harum in ad? Deserunt atque odio minus voluptatibus quod! dolore mollitia velit facere voluptatum molestiae
+          consectetur illum, eius tempore magnam sapiente nisi soluta
+          <div class="about-box__school">
+            <p>Szkolenia </p>
+            <p>Certyfikaty </p>
+          </div>
+        </p>
+      </div>
     </div>
     </div>
   </section>
 
   <!-- Offer -->
-  <section class="offer">
+  <section class="wrapper offer">
     <a name="offer"></a>
-    <h2>Oferta</h2>
-    <section class="treatments">
-      <div class="name addLine">
-        <p>Kosmetyka dłoni i paznokci</p>
-        <div class="show">+</div>
+    <h2 class="title">Oferta</h2>
+    <section class="offer__treatments">
+      <div class="offer__name addLine">
+        <p class="offer__text">Kosmetyka dłoni i paznokci</p>
+        <div class="offer__show">+</div>
       </div>
       <!-- usunąć klase active -->
-      <article class="treatment active">
-        <div>
+      <article class="offer__treatment active">
+        <div class="offer__treatment-box">
           <p>Manicure z odżywką </p>
           <p>25zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Manicure klasyczny jeden kolor</p>
           <p>35zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Manicure hybrydowy </p>
           <p>50zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Przedłużanie paznokci metodą żelową na szablonie</p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Uzupełnienie paznokci żelowych</p>
           <p>60-90zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Manicure męski</p>
           <p>30zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Zabieg odżywczo - wygładzający "Jedwabiste dłonie" </p>
           <p>30zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Parafina</p>
           <p>30zł</p>
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Kosmetyka stóp</p>
-        <div class="show">+</div>
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Kosmetyka stóp</p>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__treatment-box">
           <p>Pedicure klasyczny z odżywką </p>
           <p>60zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Pedicure klasyczny jeden kolor</p>
           <p>70zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Pedicure hybrydowy</p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Parafina</p>
           <p>50zł</p>
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Laseroterapia</p>
-        <div class="show">+</div>
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Laseroterapia</p>
+        <div class="offer__show">+</div>
       </div>
-      <article class="epil active">
-        <div class="epilShow">
-          <div class="name">
+      <article class="offer__epil offer__treatment">
+        <div class="offer__epil-show">
+          <div class="offer__name">
             <p>Twarz</p>
-            <div class="show">+</div>
+            <div class="offer__show">+</div>
           </div>
-          <div class="IPLActive">
-            <div>
+          <div class="offer__IPL-active">
+            <div class="offer__name offer__name--small">
               <p>Wąsik / Broda</p>
               <p>100zł</p>
             </div>
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Szyja</p>
               <p>100 - 150zł</p>
             </div>
 
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Baki</p>
               <p>100zł</p>
             </div>
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Cała twarz</p>
               <p>200zł</p>
             </div>
           </div>
         </div>
 
-        <div class="epilShow">
-          <div class="name">
+        <div class="offer__epil-show">
+          <div class="offer__name">
             <p>Ręce</p>
-            <div class="show">+</div>
+            <div class="offer__show">+</div>
           </div>
-          <div class="IPLActive">
-            <div>
+          <div class="offer__IPL-active">
+            <div class="offer__name offer__name--small">
               <p>Ramiona</p>
               <p>150zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Przedramiona</p>
               <p>150zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Dłonie</p>
               <p>100zł</p>
             </div>
           </div>
 
-          <div class="epilShow">
-            <div class="name">
+          <div class="offer__epil-show">
+            <div class="offer__name">
               <p>Nogi</p>
-              <div class="show">+</div>
+              <div class="offer__show">+</div>
             </div>
-            <div class="IPLActive">
-              <div>
+            <div class="offer__IPL-active">
+              <div class="offer__name offer__name--small">
                 <p>Uda</p>
                 <p>180zł</p>
               </div>
-              <div>
+              <div class="offer__name offer__name--small">
                 <p>Łydki</p>
                 <p>150zł</p>
               </div>
-              <div>
+              <div class="offer__name offer__name--small">
                 <p>Stopy</p>
                 <p>100zł</p>
               </div>
@@ -225,62 +226,53 @@
           </div>
         </div>
 
-        <div class="epilShow">
-          <div class="name">
+        <div class="offer__epil-show">
+          <div class="offer__name">
             <p>Tułów</p>
-            <div class="show">+</div>
+            <div class="offer__show">+</div>
           </div>
-          <div class="IPLActive">
-            <div>
+          <div class="offer__IPL-active">
+            <div class="offer__name offer__name--small">
               <p>Kark</p>
               <p>100 - 150zł</p>
             </div>
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Plecy</p>
               <p>150 - 200zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Klatka piersiowa</p>
               <p>100 - 150zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Okolice sutków</p>
               <p>100zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Pachy</p>
               <p>100zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Brzuch</p>
               <p>100 - 150zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Linia brzucha</p>
               <p>100zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Bikini (pachwiny)</p>
               <p>100 - 150zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Bikini całkowite</p>
               <p>150 - 200zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Pośladki</p>
               <p>100 - 150zł</p>
             </div>
-
-            <div>
+            <div class="offer__name offer__name--small">
               <p>Szpara pośladkowa</p>
               <p>100zł</p>
             </div>
@@ -288,78 +280,78 @@
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Depilacja woskiem</p>
-        <div class="show">+</div>
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Depilacja woskiem</p>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__name">
           <p>Wąsik</p>
           <p>10zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>Broda</p>
           <p>10zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>Wąsik + broda</p>
           <p>15zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>ręce</p>
           <p>40zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>pachy</p>
           <p>30zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>łydki</p>
           <p>35zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>Uda</p>
           <p>40zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>całe nogi</p>
           <p>70zł</p>
         </div>
-        <div>
+        <div class="offer__name">
           <p>Bikini</p>
           <p>40zł</p>
         </div>
 
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Stylizacja brwi i rzęs (analiza, kolor, kształt)</p>
-        <div class="show">+</div>
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Stylizacja brwi i rzęs (analiza, kolor, kształt)</p>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__treatment-box">
           <p>Regulacja brwi</p>
           <p>7 - 10zł</p>
         </div>
 
-        <div>
+        <div class="offer__treatment-box">
           <p>Henna brwi + regulacja</p>
           <p>25zł</p>
         </div>
 
-        <div>
+        <div class="offer__treatment-box">
           <p>Henna rzęs</p>
           <p>10zł</p>
         </div>
 
-        <div>
+        <div class="offer__treatment-box">
           <p>Regulacja brwi</p>
           <p>7 - 10zł</p>
         </div>
 
-        <div>
+        <div class="offer__treatment-box">
           <p>Henna brwi + regulacja + henna rzęs</p>
           <p>35zł</p>
         </div>
@@ -368,196 +360,196 @@
 
 
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Kosmetologia - pielęgnacja twarzy i ciała</p>
-        <div class="show">+</div>
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Kosmetologia - pielęgnacja twarzy i ciała</p>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__treatment-box">
           <p>Oczyszczanie manualne twarzy </p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Mikrodermabrazja diamentowa ( 30 min + maska)</p>
           <p>120 - 150zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Mikrodermabrazja diamentowa pleców </p>
           <p>150zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Peeling kawitacyjny twarzy ( 20min + maska) </p>
           <p>80zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>złuszczenie naskórka , skóry właściwej (MONOKWASY) </p>
           <p>100 - 200zł</p>
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Fale Radiowe LIFTING BEZ SKALPELA </p>
-        <div class="show">+</div>
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Fale Radiowe LIFTING BEZ SKALPELA </p>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__treatment-box">
           <p>Okolica oczu ( 10 min) </p>
           <p>60zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Bruzda nosowo- wargowa ( 15 min) </p>
           <p>80zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Okolica czoła + lwia zmarszczka ( 15min) </p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Twarz ( 45 min) </p>
           <p>160zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Twarz + szyja ( 70 min) </p>
           <p>190zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Ramiona ( 45min) </p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Brzuch / pośladki / uda ( 40/ 40/ 50 min) </p>
           <p>130zł</p>
         </div>
 
-        <div>
+        <div class="offer__treatment-box">
           <p>Uda + pośladki ( 80 min) </p>
           <p>170zł</p>
         </div>
 
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Fotoodmładzanie</p>
-        <div class="show">+</div>
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Fotoodmładzanie</p>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment active">
+        <div class="offer__treatment-box">
           <p>Czoło </p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Policzki</p>
           <p>150zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Bruzda nosowo - wargowa</p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Cała twarz </p>
           <p>200zł</p>
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Zamykanie naczynek / redukcja rumienia
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Zamykanie naczynek / redukcja rumienia
           / usuwanie przebarwień (melazma, ostuda, przebarwienia)
         </p>
-        <div class="show">+</div>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment active">
+        <div class="offer__treatment-box">
           <p>Policzki / czoło </p>
           <p>150zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Nos</p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Pojedyńcze zmiany</p>
           <p>50 - 80zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Cała twarz </p>
           <p>150 - 200zł</p>
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Leczenie trądziku
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Leczenie trądziku
         </p>
-        <div class="show">+</div>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__treatment-box">
           <p>Policzki / czoło </p>
           <p>150zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Nos</p>
           <p>100zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Pojedyńcze zmiany</p>
           <p>50 - 80zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Cała twarz </p>
           <p>150 - 200zł</p>
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Lipoliza ultradźwiękowa
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Lipoliza ultradźwiękowa
         </p>
-        <div class="show">+</div>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__treatment-box">
           <p>Ramiona / brzuch / pośladki ( 30 min) </p>
           <p>80zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Uda (40 min)</p>
           <p>120zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Nogi + pośladki (50 min) </p>
           <p>150zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Nogi + pośladki + brzuch ( 80 min) </p>
           <p>180zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Pachy </p>
           <p>150zł</p>
         </div>
       </article>
     </section>
-    <section class="treatments">
-      <div class="name">
-        <p>Zabiegi medyczne na ciało
+    <section class="offer__treatments">
+      <div class="offer__name">
+        <p class="offer__text">Zabiegi medyczne na ciało
         </p>
-        <div class="show">+</div>
+        <div class="offer__show">+</div>
       </div>
-      <article class="treatment">
-        <div>
+      <article class="offer__treatment">
+        <div class="offer__treatment-box">
           <p>Pachy</p>
           <p>80zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Fale radiowe</p>
           <p>zł</p>
         </div>
-        <div>
+        <div class="offer__treatment-box">
           <p>Lipoliza ultrakawitacyjna </p>
           <p>zł</p>
         </div>
@@ -565,25 +557,28 @@
         </div>
       </article>
     </section>
-    <p>Powyższe ceny są cenami orientacyjnymi i nie stanowią oferty w rozumieniu przepisów Kodeksu Cywilnego.</p>
-    <h3>Nie znalazłaś zabiegu? Zadzwoń! I dowiedz się więcej: <span>518 596 258</span></h3>
+    <!-- <p class="offer__note">Powyższe ceny są cenami orientacyjnymi i nie stanowią oferty w rozumieniu przepisów Kodeksu
+      Cywilnego.</p> -->
+    <h3 class="offer__not-found">Nie znalazłaś zabiegu? Zadzwoń! I dowiedz się więcej: <span>518 596 258</span></h3>
   </section>
 
   <!-- Voucher -->
   <section class="voucher wrapper">
-    <div class="voucherBox">
-      <div class="voucherOffer">
-        <h4>Voucher</h4>
-        <p>Szukasz oryginalnego prezentu dla bliskich? Podaruj coś co będą mogli długo wspominać. Voucher to
+    <h4 class="title">Voucher</h4>
+    <div class="voucher__box">
+
+      <!-- <div class="voucher__img"> -->
+      <img class="voucher__img" src="https://images.unsplash.com/photo-1509024102370-fd7802f4a7a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dafb02973bd11d98b6fb7e3390a338c3&auto=format&fit=crop&w=334&q=80"
+        alt="gift">
+      <!-- </div> -->
+      <div class="voucher__offer">
+        <p class="page__text">Szukasz oryginalnego prezentu dla bliskich? Podaruj coś co będą mogli długo wspominać.
+          Voucher to
           niewątpliwie ekskluzywny i nietuzinkowy prezent, który każdy obdarowany odbierze jako miły i szczery gest.
           Każdy bon podarunkowy dopasowany jest do indywidualnych potrzeb. Możesz wybrać każdy zabieg z oferty lub
           przeznaczyć dowolną kwotę.
         </p>
-        <p> Bony podarunkowe można zakupić w salonie. </p>
-      </div>
-      <div class="voucherImg">
-        <img src="https://images.unsplash.com/photo-1509024102370-fd7802f4a7a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dafb02973bd11d98b6fb7e3390a338c3&auto=format&fit=crop&w=334&q=80"
-          alt="">
+        <p class="page__text"> Bony podarunkowe można zakupić w salonie. </p>
       </div>
     </div>
   </section>
@@ -592,18 +587,16 @@
   <section class="wrapper sale">
     <a name="promo"></a>
     <div class="promo">
-      <h3>Aktualne promocje: </h3>
-      <div class="promotions">
-        <div class="promotion">
-          <h4>Peeling kawitacyjny <span>69 zł</span> <span>59 zł</span></h4>
-          <p>Promocja trwa do 31.12.2018r.</p>
-          <p>Do końca promocji pozostało:</p>
-          <div class="timePromo">
-            <span class="days">28 dni</span>
-            <span class="hours">15 godz.</span>
-            <span class="mins">35 min.</span>
-            <span class="sec">45 sek.</span></div>
-        </div>
+      <h3 class="title title--mod">Aktualne promocje: </h3>
+      <div class="promo__promotion">
+        <h4 class="promo__actual-offer">Peeling kawitacyjny <span>69 zł</span> <span>59 zł</span></h4>
+        <p>Promocja trwa do <span>31.12.2018r.</span></p>
+        <p>Do końca promocji pozostało:</p>
+        <div class="promo__time">
+          <span class="promo__days">28 </span><span> dni</span>
+          <span class="promo__hours">15</span><span></span> godz.</span>
+          <span class="promo__mins">35 </span><span></span> min.</span>
+          <span class="promo__sec">45 </span><span></span> sek.</span></div>
       </div>
     </div>
   </section>
@@ -611,22 +604,22 @@
   <!-- Gallery -->
   <section class="gallery wrapper">
     <a name="gallery"></a>
-    <h3>Galeria</h3>
-    <div class="box">
-      <div class="face">
-        <p> Zabiegi na twarz</p>
+    <h3 class="title">Galeria</h3>
+    <div class="gallery__content">
+      <div class=" gallery__box gallery__face">
+        <p class="gallery__text"> Zabiegi na twarz</p>
       </div>
-      <div class="body">
-        <p> Zabiegi na ciało</p>
+      <div class="gallery__box gallery__body">
+        <p class="gallery__text"> Zabiegi na ciało</p>
       </div>
-      <div class="maniciure">
-        <p> Maniciure / Pediciure</p>
+      <div class=" gallery__box gallery__maniciure">
+        <p class="gallery__text"> Maniciure / Pediciure</p>
       </div>
-      <div class="laser">
-        <p>Depilacja laserowa IPL</p>
+      <div class=" gallery__box gallery__laser">
+        <p class="gallery__text">Depilacja laserowa IPL</p>
       </div>
-      <div class="office">
-        <p>Gabinet</p>
+      <div class=" gallery__box gallery__office">
+        <p class="gallery__text">Gabinet</p>
       </div>
     </div>
 
@@ -635,10 +628,10 @@
   <!-- Contact -->
   <section class="contact">
     <a name="contact"></a>
-    <h3>Kontakt</h3>
+    <h3 class="title">Kontakt</h3>
     <div class="wrapper">
-      <div class="contactBox">
-        <div class="hoursOffice">
+      <div class="contact__box">
+        <div class="contact__hours-office">
           <h4><i class="far fa-clock"></i> Czynne:</h4>
           <p>Poniedziałek 9-18</p>
           <p>Wtorek 9-18</p>
@@ -647,19 +640,19 @@
           <p>Piątek 12-20</p>
           <p>Sobota 9-14</p>
         </div>
-        <div class="adress">
+        <div class="contact__adress">
           <h4><i class="fas fa-home"></i> Adres: </h4>
           <p>ul. Zadębie 2b</p>
           <p>Skierniewice</p>
           <p>tel: 526 956 852</p>
         </div>
-        <div class="media">
+        <div class="contact__media">
           <i class="fab fa-google-plus-square"></i>
           <a href="https://www.facebook.com/Gabinet-kosmetyczny-Scarlett-2121418338074950/" target="_blank"><i class="fab fa-facebook-square"></i></a>
         </div>
 
       </div>
-      <div class="map">
+      <div class="contact__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78677.39663629346!2d20.09913467565504!3d51.95823367383833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471960563ba116f9%3A0x7928f5df207f9c10!2s96-100+Skierniewice!5e0!3m2!1spl!2spl!4v1542977309012"
           frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
