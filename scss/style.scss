@@ -1,0 +1,518 @@
+/* 
+1. Ogólne
+2. Navigacja
+3. Slider
+4. o mnie
+5. oferta
+6. Bony
+7. aktualne promocje
+8.galeria
+9. Kontakt 
+10. Stopka
+-------------------------------------------------------------------------*/
+
+/* 1. Ogólne */
+
+// Variables 
+$color-main: #c2000b;
+$color-white: #fff;
+$color-black: #000;
+$font-family-primary: 'Saira Condensed',
+sans-serif;
+$font-family-title: 'Mali',
+cursive;
+
+@mixin button-hover() {
+  color: $color-white;
+  background-color: $color-main;
+  transition: .3s;
+}
+
+@mixin flex($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: 20px;
+}
+
+.title {
+  font-family: $font-family-title;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 30%;
+  background: $color-main;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.page__text {
+  line-height: 170%;
+  margin: 20px auto;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.wrapper {
+  margin: 40px auto;
+  width: 100%;
+}
+
+/* 2. Nawigacja  */
+
+.menu {
+  border-bottom: 3px solid $color-main;
+  @include flex(space-between);
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  z-index: 5;
+  background-color: $color-white;
+
+  &__lists {
+    display: flex;
+  }
+
+  &__list {
+    flex-basis: 100%;
+  }
+
+  &__link {
+    display: block;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    width: 6em;
+    line-height: 280%;
+    color: $color-black;
+    font-family: $font-family-title;
+
+    &:hover {
+      @include button-hover();
+    }
+  }
+}
+
+/* Slider */
+
+#carousel {
+  overflow: hidden;
+  position: relative;
+  top: 70px;
+  width: 100%;
+  height: 80vh;
+}
+
+.slider {
+  &__list {
+    list-style: none;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*min-width: 100%;
+  min-height: 100%; */
+    object-fit: cover;
+    width: 100%;
+    opacity: 0;
+    animation: slider 64s infinite linear;
+  }
+
+  &__list:nth-child(2) img {
+    animation-delay: 8s;
+  }
+
+  &__list:nth-child(3) img {
+    animation-delay: 16s
+  }
+
+  &__list:nth-child(4) img {
+    animation-delay: 24s
+  }
+
+  &__list:nth-child(5) img {
+    animation-delay: 32s
+  }
+
+  &__list:nth-child(6) img {
+    animation-delay: 40s
+  }
+
+  &__list:nth-child(7) img {
+    animation-delay: 48s
+  }
+
+  &__list:nth-child(8) img {
+    animation-delay: 56s
+  }
+}
+
+@keyframes slider {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  11% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* O mnie */
+
+.about {
+  width: 80%;
+  margin: 90px auto;
+
+  .about-box__img {
+    float: left;
+    height: 300px;
+    border: 2px solid $color-main;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-right: 50px;
+  }
+
+  .about-box__school p {
+    display: inline-block;
+    margin: 20px auto;
+    width: 49%;
+    line-height: 150%;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .about-box__school p:hover {
+    @include button-hover();
+  }
+}
+
+/* Oferta */
+
+/* .offer {
+  border-bottom: 5px solid #c2000b;
+} */
+
+.offer__treatments {
+  width: 80%;
+  padding: 0 20px;
+  margin: 0 auto;
+  transition: .5s;
+}
+
+.offer__name {
+  @include flex(space-between);
+  align-items: center;
+  padding: 5px 100px 5px 40px;
+}
+
+.offer__text {
+  font-size: 1.5rem;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  line-height: 150%;
+}
+
+/* kiedy dodanie zostanie klasa addLine dodać after */
+/* .addLine p:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 120%;
+  background: #c2000b;
+  text-align: center;
+  margin: 20px auto;
+} */
+
+.offer__show {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.offer__treatment {
+  letter-spacing: 2px;
+  line-height: 150%;
+  font-size: 1.5rem;
+  display: none;
+  padding: 0 70px;
+}
+
+.offer__name--small {
+  font-size: 1em;
+}
+
+/* Dodawana klasa po kliknięciu + */
+.offer--is-active {
+  display: block;
+}
+
+.offer__treatments .offer__show--rotate {
+  transform: rotate(45deg);
+}
+
+.offer__not-found {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 2rem;
+}
+
+.offer__not-found span {
+  color: rgb(44, 104, 54);
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.offer__note {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.offer__treatment-box {
+  @include flex(space-between);
+  width: 80%;
+  margin: 0 auto;
+  /* border-bottom: 1px solid grey; */
+}
+
+.offer__treatment-box:nth-child(odd) {
+  /* border-bottom: 1px solid grey; */
+  background-color: #ddd;
+}
+
+.offer__IPL .offer__name {
+  @include flex(space-between);
+  width: 70%;
+  // border-bottom: 1px solid grey;
+  margin: 0 auto;
+}
+
+.offer__IPL .offer__name:nth-child(odd) {
+  // border-bottom: 1px solid grey;
+  background-color: #ddd;
+}
+
+/* Bony */
+.voucher {
+  &__box {
+    @include flex(space-between);
+    background-color: #FAFAFC;
+    margin: 70px auto;
+    width: 70%;
+    box-shadow: 1px -1px 8px 1px lightgrey;
+  }
+
+  &__offer {
+    margin: auto 50px;
+  }
+}
+
+/* Aktualne promocje */
+
+.promo {
+  background-image: url(https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f384fa6a6caa83e0ffdcef585e20c99&auto=format&fit=crop&w=1350&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  text-align: center;
+
+  .title--mod {
+    padding: 30px 0;
+    background-color: rgba(225, 255, 255, .5);
+  }
+
+  &__promotion {
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, .5);
+    line-height: 150%;
+    padding: 30px 0;
+  }
+
+  &__actual-offer {
+    font-size: 3rem;
+    padding: 10px 0;
+    margin-bottom: 15px;
+  }
+
+  &__actual-offer span:nth-child(1) {
+    text-decoration: line-through;
+  }
+
+  &__actual-offer span:nth-child(2) {
+    color: $color-main;
+    font-size: 4rem;
+  }
+
+  &__time {
+    margin-top: 30px;
+    padding: 25px 0;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
+
+/* 7. Galeria */
+.gallery {
+  &__content {
+    @include flex(space-around);
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+  }
+
+  &__box {
+    height: 400px;
+    width: 400px;
+    border-radius: 10%;
+    margin: 30px auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__face {
+    background-image: url(https://images.unsplash.com/photo-1531860415933-7d5348a737d4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec323a04ea22c9913bbdb2d7ffa94170&auto=format&fit=crop&w=334&q=80);
+  }
+
+  &__body {
+    background-image: url(https://images.unsplash.com/photo-1533094835326-76dd44a9d91c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bb7bc6f0c4111897bed39680269104a5&auto=format&fit=crop&w=750&q=80);
+  }
+
+  &__maniciure {
+    background-image: url(https://images.unsplash.com/photo-1457040931721-53ca161dab33?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=898018ed70eb5a889300ac2d082de540&auto=format&fit=crop&w=400&q=60);
+  }
+
+  &__laser {
+    background-image: url(https://images.unsplash.com/photo-1511284800349-cb63bc2e6c0e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e585f0abc6bf4dfb60b5242c82e58623&auto=format&fit=crop&w=500&q=80);
+  }
+
+  &__office {
+    background-image: url(../img/gabinet/DSC_0200.JPG);
+  }
+
+  &__text {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 400px;
+    font-size: 3rem;
+    color: $color-white;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10%;
+    cursor: pointer;
+    transition: .5s;
+  }
+}
+
+.gallery__face:hover .gallery__text,
+.gallery__body:hover .gallery__text,
+.gallery__maniciure:hover .gallery__text,
+.gallery__laser:hover .gallery__text,
+.gallery__office:hover .gallery__text {
+  opacity: 1;
+}
+
+/* 8. Kontakt */
+
+.contact {
+  .wrapper {
+    @include flex(space-around);
+  }
+
+  &__box {
+    font-size: 1.9rem;
+  }
+
+  &__box h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__hours-office {
+    border-left: 3px solid $color-main;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    line-height: 120%;
+  }
+
+  &__adress {
+    border-left: 3px solid $color-main;
+    padding: 0 20px;
+  }
+
+  &__media {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 3rem;
+  }
+
+  &__media i {
+    margin: 0 20px;
+    transition: .5s;
+    cursor: pointer;
+    color: $color-main;
+  }
+
+  &__media .fa-google-plus-square:hover {
+    transform: scale(1.2);
+    color: $color-main;
+  }
+
+  &__media .fa-facebook-square:hover {
+    transform: scale(1.2);
+    color: #3B5998;
+  }
+
+  &__map iframe {
+    height: 550px;
+    width: 70vw;
+    background-color: #999;
+  }
+}
+
+/* 9. Stopka */
+
+.footer {
+  @include flex(space-between);
+  padding: 10px 40px;
+  background-color: #ccc;
+  font-size: .9rem;
+
+  & a {
+    text-decoration: none;
+  }
+}
