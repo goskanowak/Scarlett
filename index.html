@@ -21,24 +21,32 @@
   <!-- Nawigacja -->
   <header>
     <nav class="menu">
-      <a href="#" class="menu__link"><img src="img/logo/LogoSmall.jpg" alt="Logo Gabinet kosmetyczny Scarlett"></a>
-      <ul class="menu__lists">
-        <li class="menu__list">
-          <a href="#aboutMe" class="menu__link">O mnie</a>
-        </li>
-        <li class="menu__list">
-          <a href="#offer" class="menu__link">Oferta</a>
-        </li>
-        <li class="menu__list">
-          <a href="#promo" class="menu__link">Promocje</a>
-        </li>
-        <li class="menu__list">
-          <a href="#gallery" class="menu__link">Galeria</a>
-        </li>
-        <li class="menu__list">
-          <a href="#contact" class="menu__link">Kontakt</a>
-        </li>
-      </ul>
+      <div class="menu__burger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="menu__not-burger">
+
+        <ul class="menu__lists">
+          <li class="menu__list">
+            <a href="#" class="menu__link"><img src="img/logo/LogoSmall.jpg" alt="Logo Gabinet kosmetyczny Scarlett"></a>
+          </li>
+          <li class="menu__list">
+            <a href="#aboutMe" class="menu__link">O mnie</a>
+          </li>
+          <li class="menu__list">
+            <a href="#offer" class="menu__link">Oferta</a>
+          </li>
+          <li class="menu__list">
+            <a href="#promo" class="menu__link">Promocje</a>
+          </li>
+          <li class="menu__list">
+            <a href="#gallery" class="menu__link">Galeria</a>
+          </li>
+          <li class="menu__list">
+            <a href="#contact" class="menu__link">Kontakt</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -62,8 +70,7 @@
       <a name="aboutMe"></a>
       <h2 class="title">O mnie</h2>
       <div class="about-box">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3fa46375259c39d07d0227e8ade6daa&auto=format&fit=crop&w=334&q=80"
-          alt="" class="about-box__img">
+        <img alt="" class="about-box__img">
         <p class="page__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates commodi eveniet
           illo fugit autem
           excepturi ullam eius vero iste provident numquam, doloremque inventore similique. Sit, cupiditate, optio
@@ -157,7 +164,7 @@
         <p class="offer__text">Laseroterapia</p>
         <div class="offer__show">+</div>
       </div>
-      <article class="offer__epil offer__treatment">
+      <article class="offer__epil offer__treatment offer--is-active">
         <div class="offer__epil-show">
           <div class="offer__name">
             <p>Twarz</p>
@@ -455,13 +462,13 @@
       </article>
     </section>
     <section class="offer__treatments">
-      <div class="offer__name">
-        <p class="offer__text">Zamykanie naczynek / redukcja rumienia
+      <div class="offer__name addLine">
+        <p class="offer__text ">Zamykanie naczynek / redukcja rumienia
           / usuwanie przebarwień (melazma, ostuda, przebarwienia)
         </p>
         <div class="offer__show">+</div>
       </div>
-      <article class="offer__treatment active">
+      <article class="offer__treatment offer--is-active">
         <div class="offer__treatment-box">
           <p>Policzki / czoło </p>
           <p>150zł</p>
@@ -568,8 +575,7 @@
     <div class="voucher__box">
 
       <!-- <div class="voucher__img"> -->
-      <img class="voucher__img" src="https://images.unsplash.com/photo-1509024102370-fd7802f4a7a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dafb02973bd11d98b6fb7e3390a338c3&auto=format&fit=crop&w=334&q=80"
-        alt="gift">
+      <img class="voucher__img" src="img/gallery/gift.jpg" alt="gift">
       <!-- </div> -->
       <div class="voucher__offer">
         <p class="page__text">Szukasz oryginalnego prezentu dla bliskich? Podaruj coś co będą mogli długo wspominać.

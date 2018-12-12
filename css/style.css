@@ -10,6 +10,8 @@
 8.galeria
 9. Kontakt 
 10. Stopka
+11. Media
+
 -------------------------------------------------------------------------*/
 /* 1. Ogólne */
 * {
@@ -49,17 +51,16 @@ body {
 .wrapper {
   margin: 40px auto;
   width: 100%;
+  max-width: 1400px;
 }
 
 /* 2. Nawigacja  */
-.menu {
-  border-bottom: 3px solid #c2000b;
+.menu__not-burger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: fixed;
   height: 70px;
   width: 100%;
@@ -83,17 +84,30 @@ body {
   font-size: 1.2em;
   text-align: center;
   text-decoration: none;
-  width: 6em;
+  width: 7em;
   line-height: 280%;
   color: #000;
   font-family: "Mali", cursive;
 }
 
-.menu__link:hover {
-  color: #fff;
-  background-color: #c2000b;
-  -webkit-transition: .3s;
-  transition: .3s;
+.menu__link img {
+  height: 100%;
+  width: 100%;
+}
+
+.menu__burger {
+  width: 10%;
+  height: 70px;
+  position: fixed;
+  right: 0;
+  border: 1px solid #c2000b;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  font-size: 1.5em;
+  display: none;
+  z-index: 5;
 }
 
 /* Slider */
@@ -205,6 +219,7 @@ body {
 .about .about-box__img {
   float: left;
   height: 300px;
+  width: 30%;
   border: 2px solid #c2000b;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
@@ -221,17 +236,12 @@ body {
   cursor: pointer;
 }
 
-.about .about-box__school p:hover {
-  color: #fff;
-  background-color: #c2000b;
-  -webkit-transition: .3s;
-  transition: .3s;
+/* Oferta */
+.offer {
+  /* kiedy dodanie zostanie klasa addLine dodać after */
+  /* Dodawana klasa po kliknięciu + */
 }
 
-/* Oferta */
-/* .offer {
-  border-bottom: 5px solid #c2000b;
-} */
 .offer__treatments {
   width: 80%;
   padding: 0 20px;
@@ -262,17 +272,18 @@ body {
   line-height: 150%;
 }
 
-/* kiedy dodanie zostanie klasa addLine dodać after */
-/* .addLine p:after {
+.offer .addLine .offer__text:after {
   content: "";
   display: block;
   clear: both;
-  height: 3px;
-  width: 120%;
+  height: 2px;
+  width: 90%;
   background: #c2000b;
   text-align: center;
-  margin: 20px auto;
-} */
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .offer__show {
   font-size: 3rem;
   cursor: pointer;
@@ -288,9 +299,9 @@ body {
 
 .offer__name--small {
   font-size: 1em;
+  padding: 0;
 }
 
-/* Dodawana klasa po kliknięciu + */
 .offer--is-active {
   display: block;
 }
@@ -364,13 +375,18 @@ body {
           box-shadow: 1px -1px 8px 1px lightgrey;
 }
 
+.voucher__img {
+  height: 50vw;
+  width: 50vw;
+}
+
 .voucher__offer {
   margin: auto 50px;
 }
 
 /* Aktualne promocje */
 .promo {
-  background-image: url(https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f384fa6a6caa83e0ffdcef585e20c99&auto=format&fit=crop&w=1350&q=80);
+  background-image: url(../img/gallery/promo.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -385,6 +401,7 @@ body {
 
 .promo__promotion {
   font-size: 2rem;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.5);
   line-height: 150%;
   padding: 30px 0;
@@ -425,29 +442,29 @@ body {
 }
 
 .gallery__box {
-  height: 400px;
-  width: 400px;
+  height: 60vh;
+  width: 60vh;
   border-radius: 10%;
-  margin: 30px auto;
+  margin: 30px 20px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .gallery__face {
-  background-image: url(https://images.unsplash.com/photo-1531860415933-7d5348a737d4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec323a04ea22c9913bbdb2d7ffa94170&auto=format&fit=crop&w=334&q=80);
+  background-image: url(../img/gallery/face.jpg);
 }
 
 .gallery__body {
-  background-image: url(https://images.unsplash.com/photo-1533094835326-76dd44a9d91c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bb7bc6f0c4111897bed39680269104a5&auto=format&fit=crop&w=750&q=80);
+  background-image: url(../img/gallery/leg.jpg);
 }
 
 .gallery__maniciure {
-  background-image: url(https://images.unsplash.com/photo-1457040931721-53ca161dab33?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=898018ed70eb5a889300ac2d082de540&auto=format&fit=crop&w=400&q=60);
+  background-image: url(../img/gallery/hand.jpg);
 }
 
 .gallery__laser {
-  background-image: url(https://images.unsplash.com/photo-1511284800349-cb63bc2e6c0e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e585f0abc6bf4dfb60b5242c82e58623&auto=format&fit=crop&w=500&q=80);
+  background-image: url(../img/gallery/body.jpg);
 }
 
 .gallery__office {
@@ -459,22 +476,14 @@ body {
   height: 100%;
   width: 100%;
   text-align: center;
-  line-height: 400px;
-  font-size: 3rem;
+  line-height: 55vh;
+  font-size: 2rem;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10%;
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
-}
-
-.gallery__face:hover .gallery__text,
-.gallery__body:hover .gallery__text,
-.gallery__maniciure:hover .gallery__text,
-.gallery__laser:hover .gallery__text,
-.gallery__office:hover .gallery__text {
-  opacity: 1;
 }
 
 /* 8. Kontakt */
@@ -524,18 +533,6 @@ body {
   color: #c2000b;
 }
 
-.contact__media .fa-google-plus-square:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  color: #c2000b;
-}
-
-.contact__media .fa-facebook-square:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  color: #3B5998;
-}
-
 .contact__map iframe {
   height: 550px;
   width: 70vw;
@@ -557,5 +554,410 @@ body {
 
 .footer a {
   text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  .menu__link:hover {
+    color: #fff;
+    background-color: #c2000b;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .about-box__school p:hover {
+    color: #fff;
+    background-color: #c2000b;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .gallery__face:hover .gallery__text,
+  .gallery__body:hover .gallery__text,
+  .gallery__maniciure:hover .gallery__text,
+  .gallery__laser:hover .gallery__text,
+  .gallery__office:hover .gallery__text {
+    opacity: 1;
+  }
+  .contact__media .fa-google-plus-square:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: #c2000b;
+  }
+  .contact__media .fa-facebook-square:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: #3B5998;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu__link {
+    width: 6.5em;
+    font-size: 1em;
+  }
+  .gallery__box {
+    height: 55vh;
+    width: 55vh;
+    margin: 20px;
+  }
+  .gallery__face .gallery__text,
+  .gallery__body .gallery__text,
+  .gallery__maniciure .gallery__text,
+  .gallery__laser .gallery__text,
+  .gallery__office .gallery__text {
+    opacity: .8;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    border-bottom: 2px solid #c2000b;
+  }
+  .menu__link {
+    font-size: 1em;
+  }
+  .about {
+    width: 90%;
+    font-size: .9em;
+  }
+  .about .about-box__img {
+    height: 250px;
+    margin-right: 20px;
+  }
+  .offer__treatments {
+    width: 100%;
+  }
+  .offer__treatment-box {
+    width: 90%;
+  }
+  .voucher__box {
+    margin: 50px auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 2rem;
+  }
+  .page__text {
+    line-height: 170%;
+    font-size: 1em;
+  }
+  .wrapper {
+    margin: 20px auto;
+  }
+  .menu__not-burger {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .menu__lists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: bold;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu__burger {
+    display: block;
+    z-index: 10;
+  }
+  .menu #carousel {
+    top: 0;
+  }
+  .menu .about {
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 810px) {
+  .contact__box {
+    font-size: 1.5rem;
+  }
+  .contact__media {
+    font-size: 3.5rem;
+  }
+  .contact__map iframe {
+    height: 470px;
+  }
+  .voucher__box {
+    margin: 20px auto;
+    width: 90%;
+    font-size: 1.3rem;
+  }
+  .voucher__img {
+    height: 60vw;
+    width: 40vw;
+  }
+  .voucher__offer {
+    margin: auto 15px;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 690px) {
+  .about-box__school {
+    font-size: .9rem;
+  }
+  .offer__not-found {
+    padding: 0 25px;
+  }
+  .contact .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .contact__hours-office {
+    border: none;
+    margin: 0;
+  }
+  .contact__adress {
+    border: none;
+  }
+  .contact__media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .contact__map iframe {
+    height: 350px;
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 640px) {
+  .offer__treatment {
+    letter-spacing: 1px;
+    font-size: 1em;
+  }
+  .offer__not-found {
+    width: 70%;
+    line-height: 150%;
+  }
+  .offer__treatment-box {
+    width: 100%;
+    /* border-bottom: 1px solid grey; */
+  }
+  .offer__IPL .offer__name {
+    padding: 0;
+  }
+  .voucher__box {
+    font-size: 1.2rem;
+    margin: 30px auto;
+    width: 95%;
+  }
+  .voucher__img {
+    height: 60vw;
+    width: 35vw;
+  }
+  .voucher__offer {
+    margin: auto 10px;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 590px) {
+  .offer__treatment-box p {
+    padding: 0 10px;
+  }
+  .voucher__box {
+    display: block;
+    font-size: 1.2rem;
+    margin: 50px auto;
+  }
+  .voucher__img {
+    float: left;
+    margin-right: 10px;
+  }
+  .voucher__offer {
+    margin: auto 10px;
+    display: block;
+  }
+  .promo__promotion {
+    font-size: 1.4rem;
+    padding: 10px 0;
+  }
+  .promo__actual-offer {
+    font-size: 2.4rem;
+  }
+  .promo__time {
+    margin-top: 20px;
+    padding: 15px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .footer {
+    padding: 10px 10px;
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 490px) {
+  .offer__name {
+    padding: 10px;
+  }
+  .offer__treatment {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .offer__not-found {
+    width: 70%;
+    line-height: 150%;
+  }
+  .offer__treatment-box {
+    width: 100%;
+    padding: 0 10px;
+    /* border-bottom: 1px solid grey; */
+  }
+  .offer__treatment-box p {
+    padding: 0 10px;
+  }
+  .contact .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .contact__hours-office {
+    margin-bottom: 20px;
+  }
+  .contact__media {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 25px auto;
+    font-size: 4rem;
+  }
+  .promo {
+    height: 80vh;
+  }
+  .promo .title--mod {
+    padding: 10px 0;
+  }
+  .promo__promotion {
+    font-size: 1.5rem;
+    line-height: 200%;
+    padding: 10px 0;
+  }
+  .promo__actual-offer {
+    font-size: 2rem;
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+  .promo__actual-offer span:nth-child(2) {
+    font-size: 3rem;
+  }
+  .promo__time {
+    padding: 10px 0;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 440px) {
+  .about {
+    margin: 0 20px;
+  }
+  .offer {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .offer__text {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .offer__name {
+    padding: 0;
+  }
+  .offer__treatment-box {
+    padding: 0;
+  }
+  .offer__name--small {
+    margin: 0 auto;
+    width: 85%;
+  }
+  .offer__not-found {
+    margin: 0 auto;
+    width: 85%;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  .offer__not-found span {
+    font-size: 1.5rem;
+  }
+  .gallery__box {
+    height: 40vh;
+    width: 40vh;
+    margin: 10px 20px;
+  }
+  .gallery__text {
+    line-height: 40vh;
+  }
+  .gallery .footer {
+    padding: 5px;
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 360px) {
+  .gallery__text {
+    line-height: 40vh;
+    font-size: 1.6rem;
+  }
+  .contact__media {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 340px) {
+  .about .about-box__img {
+    border: 1px solid #c2000b;
+  }
+  .page__text {
+    font-size: 1rem;
+  }
+  .offer {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .offer .addLine .offer__text:after {
+    height: 1px;
+  }
+  .promo {
+    height: 90vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
