@@ -62,10 +62,14 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: fixed;
+  top: 0;
+  right: 0;
   height: 70px;
   width: 100%;
   z-index: 5;
+  overflow: hidden;
   background-color: #fff;
+  border-bottom: 3px solid #c2000b;
 }
 
 .menu__lists {
@@ -90,23 +94,20 @@ body {
   font-family: "Mali", cursive;
 }
 
-.menu__link img {
+.menu img {
   height: 100%;
   width: 100%;
 }
 
 .menu__burger {
-  width: 10%;
-  height: 70px;
+  width: 70px;
   position: fixed;
+  top: 0;
   right: 0;
-  border: 1px solid #c2000b;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
   text-align: center;
   line-height: 70px;
   font-size: 1.5em;
-  display: none;
+  display: block;
   z-index: 5;
 }
 
@@ -246,8 +247,6 @@ body {
   width: 80%;
   padding: 0 20px;
   margin: 0 auto;
-  -webkit-transition: .5s;
-  transition: .5s;
 }
 
 .offer__name {
@@ -260,33 +259,41 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 100px 5px 40px;
+  margin: 5px 100px 5px 40px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .offer__text {
   font-size: 1.5rem;
-  padding: 20px 0;
+  margin: 10px 0;
+  padding: 0 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
   line-height: 150%;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
-.offer .addLine .offer__text:after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 2px;
-  width: 90%;
-  background: #c2000b;
-  text-align: center;
-  -webkit-transition: 1s;
-  transition: 1s;
+.offer__text:hover {
+  margin-left: 20px;
+}
+
+.offer .addLine {
+  background-color: grey;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.offer .addLine:hover .offer__text {
+  margin-left: 0px;
 }
 
 .offer__show {
   font-size: 3rem;
   cursor: pointer;
+  padding-right: 20px;
 }
 
 .offer__treatment {
@@ -304,11 +311,6 @@ body {
 
 .offer--is-active {
   display: block;
-}
-
-.offer__treatments .offer__show--rotate {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 
 .offer__not-found {
@@ -345,18 +347,33 @@ body {
   background-color: #ddd;
 }
 
-.offer__IPL .offer__name {
+.offer__epil-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 100px 5px 40px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.offer__ipl .offer__ipl-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
   margin: 0 auto;
 }
 
-.offer__IPL .offer__name:nth-child(odd) {
+.offer__ipl .offer__ipl-name:nth-child(odd) {
   background-color: #ddd;
 }
 
@@ -645,11 +662,18 @@ body {
   .wrapper {
     margin: 20px auto;
   }
+  .menu {
+    border: none;
+  }
   .menu__not-burger {
     display: none;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(128, 128, 128, 0.9);
+  }
+  .menu__not-burger--active {
+    display: block;
+    border-bottom: none;
   }
   .menu__lists {
     -webkit-box-orient: vertical;
