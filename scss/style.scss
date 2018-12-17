@@ -12,67 +12,8 @@
 11. Media
 
 -------------------------------------------------------------------------*/
-
-/* 1. Ogólne */
-
-// Variables 
-$color-main: #c2000b;
-$color-white: #fff;
-$color-black: #000;
-$font-family-primary: 'Saira Condensed',
-sans-serif;
-$font-family-title: 'Mali',
-cursive;
-
-@mixin button-hover() {
-  color: $color-white;
-  background-color: $color-main;
-  transition: .3s;
-}
-
-@mixin flex($justify) {
-  display: flex;
-  justify-content: $justify;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $font-family-primary;
-  font-size: 20px;
-}
-
-.title {
-  font-family: $font-family-title;
-  font-size: 3rem;
-  text-align: center;
-}
-
-.title:after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 3px;
-  width: 30%;
-  background: $color-main;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.page__text {
-  line-height: 170%;
-  margin: 20px auto;
-  font-size: 1.2em;
-  text-align: justify;
-}
-
-.wrapper {
-  margin: 40px auto;
-  width: 100%;
-  max-width: 1400px;
-}
+@import '_variables';
+@import '_gallery';
 
 /* 2. Nawigacja  */
 
@@ -96,6 +37,7 @@ body {
 
   &__list {
     flex-basis: 100%;
+    text-align: center;
   }
 
   &__link {
@@ -121,14 +63,9 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    // border: 1px solid $color-main;
-    // border-top-left-radius: 50%;
-    // border-bottom-right-radius: 50%;
-    // background-color: red;
+    color: $color-main;
     text-align: center;
     line-height: 70px;
-    // padding: 10px 40px;
-
     font-size: 1.5em;
     display: block;
     z-index: 5;
@@ -271,30 +208,19 @@ body {
     cursor: pointer;
     line-height: 150%;
     transition: all .2s linear;
-
-    &:hover {
-      margin-left: 20px;
-    }
   }
 
-  /* kiedy dodanie zostanie klasa addLine dodać after */
   .addLine {
     // border-bottom: 2px solid $color-main;
     background-color: grey;
-    // border-radius: 5px;
     color: $color-white;
     font-size: 3rem;
-  }
-
-  .addLine:hover .offer__text {
-    margin-left: 0px;
   }
 
   &__show {
     font-size: 3rem;
     cursor: pointer;
     padding-right: 20px;
-    //  transform: scale(2);
   }
 
   &__treatment {
@@ -392,7 +318,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
   text-align: center;
 
   .title--mod {
@@ -402,10 +327,8 @@ body {
 
   &__promotion {
     font-size: 2rem;
-    height: 100vh;
     background-color: rgba(255, 255, 255, .5);
     line-height: 150%;
-    padding: 30px 0;
   }
 
   &__actual-offer {
@@ -424,7 +347,6 @@ body {
   }
 
   &__time {
-    margin-top: 30px;
     padding: 25px 0;
     font-size: 3rem;
     font-weight: bold;
@@ -470,6 +392,8 @@ body {
   }
 
   &__text {
+    display: block;
+    text-decoration: none;
     opacity: 0;
     height: 100%;
     width: 100%;
@@ -548,6 +472,7 @@ body {
   }
 }
 
+
 // Media 
 
 // hover
@@ -558,6 +483,14 @@ body {
 
   .about-box__school p:hover {
     @include button-hover();
+  }
+
+  .offer__text:hover {
+    margin-left: 20px;
+  }
+
+  .addLine:hover .offer__text {
+    margin-left: 0;
   }
 
   .gallery__face:hover .gallery__text,
@@ -687,360 +620,385 @@ body {
       z-index: 10;
     }
 
-    #carousel {
-      top: 0;
+    &__list img {
+      height: 100%;
+      width: 50%;
+    }
+  }
+
+  #carousel {
+    top: 0;
+  }
+
+  .about {
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 810px) {
+
+  .offer {
+    &__text {
+      font-size: 1.2rem;
     }
 
-    .about {
+    &__treatment {
+      font-size: 1.1rem;
+    }
+  }
+
+  .contact {
+
+    &__box {
+      font-size: 1.5rem;
+    }
+
+    &__media {
+      font-size: 3.5rem;
+    }
+
+    &__map iframe {
+      height: 470px;
+    }
+  }
+
+  .voucher {
+    &__box {
+      margin: 20px auto;
+      width: 90%;
+      font-size: 1.3rem;
+    }
+
+    &__img {
+      height: 60vw;
+      width: 40vw;
+    }
+
+    &__offer {
+      margin: auto 15px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .about-box__school {
+    font-size: .9rem;
+  }
+
+  .offer {
+    &__not-found {
+      padding: 0 25px;
+    }
+
+    &__epil-name {
+      margin: 0;
+    }
+  }
+
+  .contact {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    &__box {
+      @include flex(space-around);
+      margin-bottom: 10px;
+    }
+
+    &__hours-office {
+      border: none;
+      margin: 0;
+    }
+
+    &__adress {
+      border: none;
+    }
+
+    &__media {
+      @include flex(space-around);
+      flex-direction: column;
+      margin: 0;
+    }
+
+    &__map iframe {
+      height: 350px;
+      width: 100vw;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .offer {
+    &__treatment {
+      letter-spacing: 1px;
+      font-size: 1em;
+    }
+
+    &__not-found {
+      width: 70%;
+      line-height: 150%;
+    }
+
+    &__treatment-box {
+      width: 100%;
+      /* border-bottom: 1px solid grey; */
+    }
+
+    &__IPL .offer__name {
+      padding: 0;
+    }
+  }
+
+  .voucher {
+    &__box {
+      font-size: 1.2rem;
       margin: 30px auto;
+      width: 95%;
+    }
+
+    &__img {
+      height: 60vw;
+      width: 35vw;
+    }
+
+    &__offer {
+      margin: auto 10px;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .offer {
+
+    &__name {
+      margin: 10px 50px 10px 10px;
+    }
+
+    &__treatment-box p {
+      padding: 0 10px;
     }
   }
 
-  @media (max-width: 810px) {
-    .contact {
-
-      &__box {
-        font-size: 1.5rem;
-      }
-
-      &__media {
-        font-size: 3.5rem;
-      }
-
-      &__map iframe {
-        height: 470px;
-      }
+  .voucher {
+    &__box {
+      // @include flex(space-between);
+      // flex-direction: column;
+      display: block;
+      font-size: 1.2rem;
+      margin: 50px auto;
+      // width: 95%;
     }
 
-    .voucher {
-      &__box {
-        margin: 20px auto;
-        width: 90%;
-        font-size: 1.3rem;
-      }
+    &__img {
+      float: left;
+      // height: 50vw;
+      // width: 50%;
+      margin-right: 10px;
+    }
 
-      &__img {
-        height: 60vw;
-        width: 40vw;
-      }
-
-      &__offer {
-        margin: auto 15px;
-      }
+    &__offer {
+      margin: auto 10px;
+      display: block;
     }
   }
 
-  @media (max-width: 690px) {
-    .about-box__school {
-      font-size: .9rem;
+  .promo {
+    &__promotion {
+      font-size: 1.4rem;
+      padding: 10px 0;
     }
 
-    .offer {
-      &__not-found {
-        padding: 0 25px;
-      }
+    &__actual-offer {
+      font-size: 2.4rem;
     }
 
-    .contact {
-      .wrapper {
-        flex-direction: column;
-      }
-
-      &__box {
-        @include flex(space-around);
-        margin-bottom: 10px;
-      }
-
-      &__hours-office {
-        border: none;
-        margin: 0;
-      }
-
-      &__adress {
-        border: none;
-      }
-
-      &__media {
-        @include flex(space-around);
-        flex-direction: column;
-        margin: 0;
-      }
-
-      &__map iframe {
-        height: 350px;
-        width: 100vw;
-        margin: 0 auto;
-      }
+    &__time {
+      margin-top: 20px;
+      padding: 15px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
     }
   }
 
-  @media (max-width: 640px) {
-    .offer {
-      &__treatment {
-        letter-spacing: 1px;
-        font-size: 1em;
-      }
+  .footer {
+    padding: 10px 10px;
+    font-size: .9rem;
+  }
+}
 
-      &__not-found {
-        width: 70%;
-        line-height: 150%;
-      }
+@media (max-width: 490px) {
+  .offer {
 
-      &__treatment-box {
-        width: 100%;
-        /* border-bottom: 1px solid grey; */
-      }
-
-      &__IPL .offer__name {
-        padding: 0;
-      }
+    &__name {
+      padding: 10px;
     }
 
-    .voucher {
-      &__box {
-        font-size: 1.2rem;
-        margin: 30px auto;
-        width: 95%;
-      }
+    &__treatment {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+    }
 
-      &__img {
-        height: 60vw;
-        width: 35vw;
-      }
+    &__not-found {
+      width: 70%;
+      line-height: 150%;
+    }
 
-      &__offer {
-        margin: auto 10px;
-      }
+    &__treatment-box {
+      width: 100%;
+      padding: 0 10px;
+      /* border-bottom: 1px solid grey; */
+    }
+
+    &__treatment-box p {
+      padding: 0 10px;
     }
   }
 
-  @media (max-width: 590px) {
-    .offer {
-      &__treatment-box p {
-        padding: 0 10px;
-      }
+  .contact {
+    .wrapper {
+      flex-direction: column;
     }
 
-    .voucher {
-      &__box {
-        // @include flex(space-between);
-        // flex-direction: column;
-        display: block;
-        font-size: 1.2rem;
-        margin: 50px auto;
-        // width: 95%;
-      }
-
-      &__img {
-        float: left;
-        // height: 50vw;
-        // width: 50%;
-        margin-right: 10px;
-      }
-
-      &__offer {
-        margin: auto 10px;
-        display: block;
-      }
+    &__box {
+      @include flex(space-around);
+      flex-direction: column;
+      text-align: center;
     }
 
-    .promo {
-      &__promotion {
-        font-size: 1.4rem;
-        padding: 10px 0;
-      }
+    &__hours-office {
+      margin-bottom: 20px;
+    }
 
-      &__actual-offer {
-        font-size: 2.4rem;
-      }
+    &__media {
+      flex-direction: row;
+      margin: 25px auto;
+      font-size: 4rem;
+    }
+  }
 
-      &__time {
-        margin-top: 20px;
-        padding: 15px 0;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
+  .promo {
+    height: 80vh;
+
+    .title--mod {
+      padding: 10px 0;
+    }
+
+    &__promotion {
+      font-size: 1.5rem;
+      line-height: 200%;
+      padding: 10px 0;
+    }
+
+    &__actual-offer {
+      font-size: 2rem;
+      padding: 10px 0;
+      margin-bottom: 10px;
+    }
+
+    &__actual-offer span:nth-child(2) {
+      font-size: 3rem;
+    }
+
+    &__time {
+      padding: 10px 0;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .about {
+    margin: 0 20px;
+  }
+
+  .offer {
+    margin: 0;
+    font-size: 1rem;
+
+    &__text {
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    &__name {
+      padding: 0;
+    }
+
+    &__treatment-box {
+      padding: 0;
+    }
+
+    &__name--small {
+      margin: 0 auto;
+      width: 85%;
+    }
+
+    &__not-found {
+      margin: 0 auto;
+      width: 85%;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    &__not-found span {
+      font-size: 1.5rem;
+    }
+  }
+
+  .gallery {
+    &__box {
+      height: 40vh;
+      width: 40vh;
+      margin: 10px 20px;
+    }
+
+    &__text {
+      line-height: 40vh;
     }
 
     .footer {
-      padding: 10px 10px;
-      font-size: .9rem;
+      padding: 5px;
+      font-size: .7rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+
+  .gallery__text {
+    line-height: 40vh;
+    font-size: 1.6rem;
+  }
+
+  .contact__media {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 340px) {
+
+  .about {
+    .about-box__img {
+      border: 1px solid $color-main;
     }
   }
 
-  @media (max-width: 490px) {
-    .offer {
+  .page__text {
+    font-size: 1rem;
+  }
 
-      &__name {
-        padding: 10px;
-      }
+  .offer {
+    margin: 0;
+    font-size: 1rem;
 
-      &__treatment {
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
-      }
-
-      &__not-found {
-        width: 70%;
-        line-height: 150%;
-      }
-
-      &__treatment-box {
-        width: 100%;
-        padding: 0 10px;
-        /* border-bottom: 1px solid grey; */
-      }
-
-      &__treatment-box p {
-        padding: 0 10px;
-      }
-    }
-
-    .contact {
-      .wrapper {
-        flex-direction: column;
-      }
-
-      &__box {
-        @include flex(space-around);
-        flex-direction: column;
-        text-align: center;
-      }
-
-      &__hours-office {
-        margin-bottom: 20px;
-      }
-
-      &__media {
-        flex-direction: row;
-        margin: 25px auto;
-        font-size: 4rem;
-      }
-    }
-
-    .promo {
-      height: 80vh;
-
-      .title--mod {
-        padding: 10px 0;
-      }
-
-      &__promotion {
-        font-size: 1.5rem;
-        line-height: 200%;
-        padding: 10px 0;
-      }
-
-      &__actual-offer {
-        font-size: 2rem;
-        padding: 10px 0;
-        margin-bottom: 10px;
-      }
-
-      &__actual-offer span:nth-child(2) {
-        font-size: 3rem;
-      }
-
-      &__time {
-        padding: 10px 0;
-        font-size: 2rem;
-      }
+    .addLine .offer__text:after {
+      height: 1px;
     }
   }
 
-  @media (max-width: 440px) {
-    .about {
-      margin: 0 20px;
-    }
-
-    .offer {
-      margin: 0;
-      font-size: 1rem;
-
-      &__text {
-        font-size: 1rem;
-        padding: 0;
-      }
-
-      &__name {
-        padding: 0;
-      }
-
-      &__treatment-box {
-        padding: 0;
-      }
-
-      &__name--small {
-        margin: 0 auto;
-        width: 85%;
-      }
-
-      &__not-found {
-        margin: 0 auto;
-        width: 85%;
-        padding: 0;
-        font-size: 1.1rem;
-      }
-
-      &__not-found span {
-        font-size: 1.5rem;
-      }
-    }
-
-    .gallery {
-      &__box {
-        height: 40vh;
-        width: 40vh;
-        margin: 10px 20px;
-      }
-
-      &__text {
-        line-height: 40vh;
-      }
-
-      .footer {
-        padding: 5px;
-        font-size: .7rem;
-      }
-    }
-  }
-
-  @media (max-width: 360px) {
-
-    .gallery__text {
-      line-height: 40vh;
-      font-size: 1.6rem;
-    }
-
-    .contact__media {
-      font-size: 3.5rem;
-    }
-  }
-
-  @media (max-width: 340px) {
-
-    .about {
-      .about-box__img {
-        border: 1px solid $color-main;
-      }
-    }
-
-    .page__text {
-      font-size: 1rem;
-    }
-
-    .offer {
-      margin: 0;
-      font-size: 1rem;
-
-      .addLine .offer__text:after {
-        height: 1px;
-      }
-    }
-
-    .promo {
-      height: 90vh;
-    }
+  .promo {
+    height: 90vh;
   }
 }

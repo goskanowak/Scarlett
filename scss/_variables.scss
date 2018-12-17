@@ -1,0 +1,58 @@
+// Variables 
+$color-main: #c2000b;
+$color-white: #fff;
+$color-black: #000;
+$font-family-primary: 'Saira Condensed',
+sans-serif;
+$font-family-title: 'Mali',
+cursive;
+
+@mixin button-hover() {
+  color: $color-white;
+  background-color: $color-main;
+  transition: .3s;
+}
+
+@mixin flex($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: 20px;
+}
+
+.title {
+  font-family: $font-family-title;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 3px;
+  width: 30%;
+  background: $color-main;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.page__text {
+  line-height: 170%;
+  margin: 20px auto;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.wrapper {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 1400px;
+}

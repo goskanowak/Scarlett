@@ -1,0 +1,76 @@
+// Style to page gallery
+
+.top {
+  position: absolute;
+  top: 0;
+}
+
+.back {
+  position: relative;
+
+  &__link {
+    position: absolute;
+    left: 0;
+    text-decoration: none;
+    color: $color-black;
+    width: 100%;
+    background-color: grey;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .top {
+    top: 0;
+  }
+
+  .down {
+    bottom: 0;
+  }
+
+  .fas {
+    margin: 0 30px;
+    transition: 1s;
+    font-size: 1.5rem;
+  }
+
+  &__link:hover .fas {
+    color: $color-white;
+    margin-left: 0px;
+  }
+}
+
+.photos {
+  padding: 40px;
+}
+
+.photo {
+
+  &__title {
+    padding: 20px;
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  &__title:after {
+    content: "";
+    width: 95%;
+    border-bottom: 3px solid $color-main;
+    display: inline-block;
+    // vertical-align: middle;
+    margin-left: 20px;
+  }
+
+  &__box {
+    @include flex(space-around);
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    height: 40vh;
+    width: 40vh;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 10px;
+  }
+}
